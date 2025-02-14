@@ -1,0 +1,56 @@
+" Helpful documentation : https://github.com/JetBrains/ideavim/wiki/
+
+set scrolloff=15
+
+set incsearch
+set ideajoin
+
+set clipboard+=unnamedplus
+
+set number relativenumber
+
+set ignorecase
+set smartcase
+
+map Q gq
+
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
+
+set which-key
+set notimeout
+
+let g:WhichKey_ShowVimActions = "true"
+let g:WhichKey_DefaultDelay = 250
+
+set mapleader=" "
+
+map <C-c> <Esc>
+imap jj <Esc>
+
+map <leader><leader> <Action>(ShowHoverInfo)
+
+" Does not seem to work, should be set in IDE Keymap
+" map <C-p> <Action>(EditorUp)
+" map <C-n> <Action>(EditorDown)
+
+map <leader>sf <Action>(GotoFile)
+map <leader>se <Action>(SearchEverywhere)
+map <leader>sa <Action>(GotoAction)
+map <leader>ss <Action>(GotoSymbol)
+
+map <leader>dr <Action>(ChooseDebugConfiguration)
+map <leader>db <Action>(ToggleLineBreakpoint)
+map <leader>r <Action>(RunMenu)
+
+map <leader>to <Action>(Terminal.OpenInTerminal)
+map <leader>tg <Action>(ActivateTerminalToolWindow)
+
+map <leader>id <Action>(ToggleDistractionFreeMode)
+map <leader>ir <Action>(RefactoringMenu)
+
+map <leader>ivr <Action>(IdeaVim.ReloadVimRc.reload)
+
+nmap [[ <Action>(MethodUp)
+nmap ]] <Action>(MethodDown)
+
