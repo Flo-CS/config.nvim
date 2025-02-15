@@ -23,7 +23,7 @@ set notimeout
 let g:WhichKey_ShowVimActions = "true"
 let g:WhichKey_DefaultDelay = 250
 
-set mapleader=" "
+let mapleader = " "
 
 map <C-c> <Esc>
 imap jj <Esc>
