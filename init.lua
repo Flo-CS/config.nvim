@@ -40,6 +40,8 @@ vim.opt.cursorline = true
 
 vim.opt.scrolloff = 15
 
+vim.keymap.set('i', 'jj', '<Esc>')
+
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
@@ -156,6 +158,14 @@ require('lazy').setup({
     },
     config = function()
       require('telescope').setup {
+        defaults = {
+          mappings = {
+            i = {
+              -- ['<esc>'] = require('telescope.actions').close,
+              ['jj'] = require('telescope.actions').close,
+            },
+          },
+        },
         pickers = {
           find_files = {
             find_command = {
