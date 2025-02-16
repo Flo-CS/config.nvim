@@ -40,7 +40,7 @@ vim.opt.cursorline = true
 
 vim.opt.scrolloff = 15
 
-vim.keymap.set('i', 'jj', '<Esc>')
+-- vim.keymap.set('i', 'jj', '<Esc>')
 
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
@@ -162,7 +162,7 @@ require('lazy').setup({
           mappings = {
             i = {
               -- ['<esc>'] = require('telescope.actions').close,
-              ['jj'] = require('telescope.actions').close,
+              -- ['jj'] = require('telescope.actions').close,
             },
           },
         },
