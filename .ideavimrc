@@ -26,7 +26,7 @@ let g:WhichKey_DefaultDelay = 250
 let mapleader = " "
 
 map <C-c> <Esc>
-imap jj <Esc>
+" imap jj <Esc>
 
 map <leader><leader> <Action>(ShowHoverInfo)
 
