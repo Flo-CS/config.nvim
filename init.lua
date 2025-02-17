@@ -310,6 +310,10 @@ require('lazy').setup({
       local capabilities = vim.lsp.protocol.make_client_capabilities()
       capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
 
+      -- JDTLS CONFIG / Perhaps to move
+      local jdtls_workspace = vim.fn.stdpath 'data' .. '/site/java/workspace-root/' .. vim.fn.fnamemodify(vim.fn.getcwd(), ':p:h:t')
+      local lombok_path = 'C:/DevConfig/lombok.jar'
+
       local servers = {
         rust_analyzer = {},
         lua_ls = {
@@ -320,6 +324,15 @@ require('lazy').setup({
               },
             },
           },
+        },
+        jdtls = {
+          cmd = {
+            'jdtls',
+            '-data',
+            jdtls_workspace,
+            '--jvm-arg=-javaagent:' .. lombok_path,
+          },
+          root_dir = require('lspconfig.util').root_pattern('.git', 'mvnw', 'gradlew', 'pom.xml', 'build.gradle'),
         },
       }
 
@@ -486,7 +499,7 @@ require('lazy').setup({
     build = ':TSUpdate',
     main = 'nvim-treesitter.configs',
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'rust' },
+      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'rust', 'java' },
       auto_install = true,
       highlight = {
         enable = true,
