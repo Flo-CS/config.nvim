@@ -38,6 +38,7 @@ map <leader>sf <Action>(GotoFile)
 map <leader>se <Action>(SearchEverywhere)
 map <leader>sa <Action>(GotoAction)
 map <leader>ss <Action>(GotoSymbol)
+map <leader>sw <Action>(Switcher)
 
 map <leader>dr <Action>(ChooseDebugConfiguration)
 map <leader>db <Action>(ToggleLineBreakpoint)
