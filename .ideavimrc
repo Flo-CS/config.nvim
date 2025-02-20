@@ -18,7 +18,9 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'tpope/vim-commentary'
 
 set which-key
+set quickscope
 set notimeout
+" set mini-ai
 
 let g:WhichKey_ShowVimActions = "true"
 let g:WhichKey_DefaultDelay = 250
@@ -49,7 +51,16 @@ map <leader>tb <Action>(ToggleLineBreakpoint)
 map <leader>cr <Action>(RefactoringMenu)
 
 map <leader>ivr <Action>(IdeaVim.ReloadVimRc.reload)
+" nnoremap <leader>im :call ToggleCaseMovementImproved()<CR>
 
 nmap [[ <Action>(MethodUp)
 nmap ]] <Action>(MethodDown)
 
+" let g:My_CaseMovementImproved = 0
+" function ToggleCaseMovementImproved()
+" if My_CaseMovementImproved == 0
+" 	 	My_CaseMovementImproved = 1	
+" elseif
+" 		My_CaseMovementImproved = 0
+" endif
+" endfunction
