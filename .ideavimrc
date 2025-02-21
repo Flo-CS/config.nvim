@@ -28,6 +28,7 @@ let g:WhichKey_DefaultDelay = 250
 let mapleader = " "
 
 map <C-c> <Esc>
+map <C-c> <Action>(EditorEscape)
 " imap jj <Esc>
 
 map <leader><leader> <Action>(ShowHoverInfo)
@@ -51,16 +52,7 @@ map <leader>tb <Action>(ToggleLineBreakpoint)
 map <leader>cr <Action>(RefactoringMenu)
 
 map <leader>ivr <Action>(IdeaVim.ReloadVimRc.reload)
-" nnoremap <leader>im :call ToggleCaseMovementImproved()<CR>
 
 nmap [[ <Action>(MethodUp)
 nmap ]] <Action>(MethodDown)
 
-" let g:My_CaseMovementImproved = 0
-" function ToggleCaseMovementImproved()
-" if My_CaseMovementImproved == 0
-" 	 	My_CaseMovementImproved = 1	
-" elseif
-" 		My_CaseMovementImproved = 0
-" endif
-" endfunction
