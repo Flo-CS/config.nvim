@@ -59,7 +59,8 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 vim.keymap.set('n', '<CR>', 'o<Esc>')
-vim.keymap.set('n', '<leader><CR>', 'O<Esc>')
+vim.keymap.set('n', '[<CR>', 'o<Esc>')
+vim.keymap.set('n', ']<CR>', 'O<Esc>')
 
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = 'Highlight when yanking (copying) text',
