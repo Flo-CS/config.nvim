@@ -93,7 +93,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 vim.api.nvim_create_autocmd('FileType', {
-  pattern = 'markdown',
+  pattern = { 'markdown', 'typescript' },
   command = 'setlocal foldmethod=expr foldexpr=nvim_treesitter#foldexpr() foldlevel=99',
 })
 
