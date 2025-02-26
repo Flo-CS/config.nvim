@@ -6,8 +6,8 @@ if vim.g.neovide then
   -- Styling
   vim.g.neovide_scroll_animation_length = 0.1
   vim.g.neovide_cursor_trail_size = 0.1
-  vim.g.neovide_transparency = 0.95
-  vim.g.neovide_normal_opacity = 0.95
+  vim.g.neovide_transparency = 0.975
+  vim.g.neovide_normal_opacity = 0.975
   -- Scale
   vim.g.neovide_scale_factor = 0.85
   local change_scale_factor = function(delta)
@@ -89,6 +89,11 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   callback = function()
     vim.highlight.on_yank()
   end,
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'markdown',
+  command = 'setlocal foldmethod=expr foldexpr=nvim_treesitter#foldexpr()',
 })
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
