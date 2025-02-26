@@ -93,7 +93,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 vim.api.nvim_create_autocmd('FileType', {
   pattern = 'markdown',
-  command = 'setlocal foldmethod=expr foldexpr=nvim_treesitter#foldexpr()',
+  command = 'setlocal foldmethod=expr foldexpr=nvim_treesitter#foldexpr() foldlevel=99',
 })
 
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
