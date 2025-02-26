@@ -365,6 +365,8 @@ require('lazy').setup({
           },
           root_dir = require('lspconfig.util').root_pattern('.git', 'mvnw', 'gradlew', 'pom.xml', 'build.gradle'),
         },
+        ts_ls = {},
+        astro = {},
       }
 
       local ensure_installed = vim.tbl_keys(servers or {})
@@ -544,7 +546,26 @@ require('lazy').setup({
     build = ':TSUpdate',
     main = 'nvim-treesitter.configs',
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc', 'rust', 'java' },
+      ensure_installed = {
+        'bash',
+        'c',
+        'diff',
+        'html',
+        'lua',
+        'luadoc',
+        'markdown',
+        'markdown_inline',
+        'query',
+        'vim',
+        'vimdoc',
+        'rust',
+        'java',
+        'css',
+        'javascript',
+        'typescript',
+        'astro',
+        'tsx',
+      },
       auto_install = true,
       highlight = {
         enable = true,
