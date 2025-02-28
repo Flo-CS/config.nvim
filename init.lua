@@ -217,6 +217,18 @@ require('lazy').setup({
               '!**/.git/*',
             },
           },
+          lsp_references = {
+            path_display = { 'smart' },
+          },
+          lsp_definitions = {
+            path_display = { 'smart' },
+          },
+          lsp_type_definitions = {
+            path_display = { 'smart' },
+          },
+          lsp_implementations = {
+            path_display = { 'smart' },
+          },
         },
         extensions = {
           ['ui-select'] = {
