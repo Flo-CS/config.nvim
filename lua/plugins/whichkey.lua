@@ -2,6 +2,9 @@ return {
   {
     'folke/which-key.nvim',
     event = 'VimEnter',
+    keys = {
+      { '<leader>w', '<cmd>WhichKey <CR>', noremap = true, silent = true },
+    },
     opts = {
       delay = 0,
       icons = {
