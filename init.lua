@@ -15,7 +15,10 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-  { import = 'plugins' },
+  change_detection = { notify = false },
+  spec = {
+    { import = 'plugins' },
+  },
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {},
