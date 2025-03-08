@@ -36,6 +36,8 @@ return {
           ['<C-f>'] = cmp.mapping.scroll_docs(4),
 
           ['<CR>'] = cmp.mapping.confirm { select = true },
+
+          ['<C-space>'] = cmp.mapping.complete(),
         },
         sources = {
           {
