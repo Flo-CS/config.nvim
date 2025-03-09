@@ -12,7 +12,6 @@ return {
         function()
           require('conform').format { async = true, lsp_format = 'fallback' }
         end,
-        mode = '',
         desc = '[c]ode [f]ormat buffer',
       },
     },

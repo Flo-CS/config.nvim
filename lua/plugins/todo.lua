@@ -6,12 +6,6 @@ return {
     opts = {
       signs = true,
       highlight = { comments_only = false },
-      keywords = {
-        SLIDE = {
-          icon = '',
-          color = 'info',
-        },
-      },
     },
   },
 }

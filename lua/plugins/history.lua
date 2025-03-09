@@ -9,9 +9,9 @@ return {
     },
     keys = {
       {
-        '<leader>th',
+        '<leader>sH',
         '<cmd>Telescope undo<cr>',
-        desc = '[t]oggle [h]istory tree',
+        desc = '[s]earch [H]istory',
       },
     },
     opts = {
