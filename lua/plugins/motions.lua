@@ -8,22 +8,22 @@ return {
       { 'b', "<cmd>lua require('spider').motion('b')<CR>", mode = { 'n', 'o', 'x' } },
     },
   },
-  {
-    'folke/flash.nvim',
-    event = 'VeryLazy',
-    ---@type Flash.Config
-    opts = {},
-    keys = {
-      {
-        '<leader><leader>',
-        mode = { 'n', 'x', 'o' },
-        function()
-          require('flash').jump()
-        end,
-        desc = '(s)earch w/ Flash',
-      },
-    },
-  },
+  -- {
+  --   'folke/flash.nvim',
+  --   event = 'VeryLazy',
+  --   ---@type Flash.Config
+  --   opts = {},
+  --   keys = {
+  --     --   {
+  --     --     '<leader><leader>',
+  --     --     mode = { 'n', 'x', 'o' },
+  --     --     function()
+  --     --       require('flash').jump()
+  --     --     end,
+  --     --     desc = '(s)earch w/ Flash',
+  --     --   },
+  --   },
+  -- },
   {
     'ThePrimeagen/harpoon',
     branch = 'harpoon2',
