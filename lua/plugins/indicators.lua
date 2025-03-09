@@ -6,4 +6,5 @@ return {
       require('lualine').setup {}
     end,
   },
+  { 'RRethy/vim-illuminate' },
 }

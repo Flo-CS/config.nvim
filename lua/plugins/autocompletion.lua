@@ -63,4 +63,19 @@ return {
       cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
     end,
   },
+  {
+    'windwp/nvim-ts-autotag',
+    event = 'BufRead',
+    config = function()
+      require('nvim-ts-autotag').setup {}
+    end,
+  },
+  {
+    'kylechui/nvim-surround',
+    version = '*',
+    event = 'VeryLazy',
+    config = function()
+      require('nvim-surround').setup {}
+    end,
+  },
 }

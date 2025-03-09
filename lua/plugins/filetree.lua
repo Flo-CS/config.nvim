@@ -13,7 +13,19 @@ return {
     },
     config = function()
       require('neo-tree').setup {
+        hide_root_node = true,
+        retain_hidden_root_indent = true,
         close_if_last_window = true,
+        source_selector = {
+          winbar = true,
+        },
+        default_component_configs = {
+          indent = {
+            with_expanders = true,
+            expander_collapsed = '',
+            expander_expanded = '',
+          },
+        },
         filesystem = {
           window = {
             position = 'left',

@@ -3,7 +3,7 @@ return {
     'folke/which-key.nvim',
     event = 'VimEnter',
     keys = {
-      { '<leader>w', '<cmd>WhichKey <CR>', noremap = true, silent = true },
+      { '<leader>w', '<cmd>WhichKey <CR>', noremap = true, silent = true, desc = '[w]hichkey' },
     },
     opts = {
       delay = 0,
