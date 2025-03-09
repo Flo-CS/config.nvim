@@ -7,6 +7,11 @@ return {
       { 'e', "<cmd>lua require('spider').motion('e')<CR>", mode = { 'n', 'o', 'x' } },
       { 'b', "<cmd>lua require('spider').motion('b')<CR>", mode = { 'n', 'o', 'x' } },
     },
+    config = function()
+      require('spider').setup {
+        skipInsignificantPunctuation = false,
+      }
+    end,
   },
   -- {
   --   'folke/flash.nvim',
@@ -24,12 +29,4 @@ return {
   --     --   },
   --   },
   -- },
-  {
-    'ThePrimeagen/harpoon',
-    branch = 'harpoon2',
-    dependencies = { 'nvim-lua/plenary.nvim' },
-    config = function()
-      require('harpoon').setup {}
-    end,
-  },
 }
