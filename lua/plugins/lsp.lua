@@ -8,6 +8,11 @@ local function build_jdtls_config()
       '-data',
       jdtls_workspace,
       '--jvm-arg=-javaagent:' .. lombok_path,
+      '--add-modules=ALL-SYSTEM',
+      '--add-opens',
+      'java.base/java.util=ALL-UNNAMED',
+      '--add-opens',
+      'java.base/java.lang=ALL-UNNAMED',
     },
     root_dir = require('lspconfig.util').root_pattern('.git', 'mvnw', 'gradlew', 'pom.xml', 'build.gradle'),
     settings = {
@@ -17,11 +22,11 @@ local function build_jdtls_config()
           runtimes = {
             {
               name = 'JavaSE-17',
-              path = 'C:/Program Files/Java/jdk-17',
+              path = os.getenv 'JAVA_17_HOME',
             },
             {
               name = 'JavaSE-21',
-              path = 'C:/Program Files/Java/jdk-21',
+              path = os.getenv 'JAVA_21_HOME',
             },
           },
           annotationProcessing = {
@@ -137,4 +142,5 @@ return {
       },
     },
   },
+  { 'mfussenegger/nvim-jdtls' },
 }
