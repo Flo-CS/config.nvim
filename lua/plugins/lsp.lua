@@ -91,7 +91,7 @@ return {
           map('gI', require('telescope.builtin').lsp_implementations, '[g]oto [I]mplementation')
           map('gD', vim.lsp.buf.declaration, '[g]oto [D]eclaration')
           map('<leader>cr', vim.lsp.buf.rename, '[c]ode [r]ename')
-          map('<leader>ca', vim.lsp.buf.code_action, '[c]ode [a]ction', { 'n', 'x' })
+          map('<leader>ca', vim.lsp.buf.code_action, '[c]ode [a]ction')
         end,
       })
 

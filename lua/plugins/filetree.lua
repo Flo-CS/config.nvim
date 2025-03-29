@@ -28,7 +28,7 @@ return {
         },
         filesystem = {
           window = {
-            position = 'left',
+            position = 'float',
           },
           filtered_items = {
             hide_dotfiles = false,
