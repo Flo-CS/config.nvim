@@ -15,7 +15,7 @@ return {
       require('neo-tree').setup {
         hide_root_node = true,
         retain_hidden_root_indent = true,
-        close_if_last_window = true,
+        close_if_last_window = false,
         source_selector = {
           winbar = true,
         },
@@ -27,6 +27,7 @@ return {
           },
         },
         filesystem = {
+          hijack_netrw_behavior = 'disabled',
           window = {
             position = 'float',
           },
@@ -45,6 +46,20 @@ return {
           },
         },
       }
+    end,
+  },
+  {
+    'stevearc/oil.nvim',
+    ---@module 'oil'
+    ---@type oil.SetupOpts
+    opts = {},
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    lazy = false,
+    keys = {
+      { '<leader>o', ':Oil<CR>', desc = '[o]il explorer' },
+    },
+    config = function()
+      require('oil').setup {}
     end,
   },
 }
