@@ -3,55 +3,64 @@
 set scrolloff=15
 
 set incsearch
-set ideajoin
-
-set clipboard+=unnamedplus
-
-set number relativenumber
-
 set ignorecase
 set smartcase
 
-map Q gq
+set ideajoin
 
-Plug 'machakann/vim-highlightedyank'
-Plug 'tpope/vim-commentary'
+set clipboard+=unnamedplus
+set number relativenumber
 
-set which-key
-set quickscope
 set notimeout
-" set mini-ai
 
-let g:WhichKey_ShowVimActions = "true"
-let g:WhichKey_DefaultDelay = 250
+set idearefactormode=keep
 
 let mapleader = " "
 
+" Plugins
+set which-key
+set quickscope
+set argtextobj
+set functiontextobj
+set highlightedyank
+set commentary
+set peekaboo
+set surround
+
+" Plugins config
+let g:WhichKey_ShowVimActions = "true"
+let g:WhichKey_DefaultDelay = 100
+
+" Mappings
+map Q gq
+
 map <C-c> <Esc>
 map <C-c> <Action>(EditorEscape)
-" imap jj <Esc>
+map <C-c> <Action>(CloseActiveTab)
 
-map <leader><leader> <Action>(ShowHoverInfo)
-
-" Does not seem to work, should be set in IDE Keymap
+" Does not seem to work, should be set in IDE Keymap, perhaps I need to use sethandler
 " map <C-p> <Action>(EditorUp)
 " map <C-n> <Action>(EditorDown)
+" map K <Action>(ShowHoverInfo)
 
 map <leader>sf <Action>(GotoFile)
+map <leader>sg <Action>(FindInPath)
 map <leader>se <Action>(SearchEverywhere)
 map <leader>sa <Action>(GotoAction)
 map <leader>ss <Action>(GotoSymbol)
 map <leader>sw <Action>(Switcher)
 
-map <leader>prd <Action>(ChooseDebugConfiguration)
-map <leader>prn <Action>(RunMenu)
+map <leader>dd <Action>(ChooseDebugConfiguration)
+map <leader>db <Action>(ToggleLineBreakpoint)
 
-map <leader>tdf <Action>(ToggleDistractionFreeMode)
-map <leader>tb <Action>(ToggleLineBreakpoint)
+map <leader>rr <Action>(RunMenu)
 
-map <leader>cr <Action>(RefactoringMenu)
+map <leader>td <Action>(ToggleDistractionFreeMode)
 
-map <leader>ivr <Action>(IdeaVim.ReloadVimRc.reload)
+map <leader>ca <Action>(RefactoringMenu)
+map <leader>cr <Action>(RenameElement)
+
+map <leader>Ir <Action>(IdeaVim.ReloadVimRc.reload)
 
 nmap [[ <Action>(MethodUp)
 nmap ]] <Action>(MethodDown)
