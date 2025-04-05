@@ -47,7 +47,7 @@ map <C-c> <Action>(CloseActiveTab)
 " Does not seem to work, should be set in IDE Keymap, perhaps I need to use sethandler
 " map <C-p> <Action>(EditorUp)
 " map <C-n> <Action>(EditorDown)
-" map K <Action>(ShowHoverInfo)
+map K <Action>(ShowHoverInfo)
 " map U <Action>(QuickImplementations)
 
 map <leader>sf <Action>(GotoFile)
