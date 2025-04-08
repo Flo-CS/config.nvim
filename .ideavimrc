@@ -30,6 +30,7 @@ set commentary
 set peekaboo
 Plug 'tpope/vim-surround'
 set surround
+set NERDTree
 
 " Plugins config
 let g:WhichKey_ShowVimActions = "true"
@@ -68,10 +69,13 @@ map <leader>td <Action>(ToggleDistractionFreeMode)
 map <leader>ca <Action>(RefactoringMenu)
 map <leader>cr <Action>(RenameElement)
 
+map <leader>e :NERDTreeFind<CR>
+
 map <leader>a <Action>(FileStructurePopup)
 
 map <leader>Ir <Action>(IdeaVim.ReloadVimRc.reload)
 
 nmap [[ <Action>(MethodUp)
 nmap ]] <Action>(MethodDown)
+
 
