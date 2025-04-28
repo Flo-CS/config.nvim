@@ -61,6 +61,12 @@ map <leader>sw <Action>(Switcher)
 
 map <leader>dd <Action>(ChooseDebugConfiguration)
 map <leader>db <Action>(ToggleLineBreakpoint)
+map <leader>dr <Action>(Resume)
+map <leader>dc <Action>(RunToCursor)
+map <leader>do <Action>(StepOver)
+map <leader>di <Action>(StepInto)
+map <leader>dO <Action>(StepOut)
+map <leader>ds <Action>(StreamTracerAction)
 
 map <leader>rr <Action>(RunMenu)
 
